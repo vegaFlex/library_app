@@ -1,4 +1,5 @@
-# library_app
+# library_management_app
+
 
 Library Management Application
 Catalogue of books:
