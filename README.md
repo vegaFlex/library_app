@@ -24,7 +24,7 @@ Admin Dashboard:
 An admin panel where admins can track stats like most borrowed books, active readers, etc.
 Technology and Libraries
 Django as backend.
-Django REST Framework, if you want to include an API.
+Django REST Framework.
 PostgreSQL for database.
 Django Admin for management and testing.
 Bootstrap or TailwindCSS for styling the interface.
