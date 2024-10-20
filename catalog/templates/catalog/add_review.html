@@ -1,0 +1,12 @@
+{% extends "catalog/base.html" %}
+
+{% block content %}
+    <h1>Add Review for "{{ book.title }}"</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Review</button>
+    </form>
+    <a href="{% url 'catalog:book_detail' book.id %}">Back to book details</a>
+{% endblock %}
+

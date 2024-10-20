@@ -1,0 +1,9 @@
+<!-- catalog/templates/catalog/search_results.html -->
+<h1>Search Results for "{{ query }}"</h1>
+<ul>
+    {% for book in books %}
+        <li>{{ book.title }} by {{ book.author }}</li>
+    {% empty %}
+        <p>No books found.</p>
+    {% endfor %}
+</ul>

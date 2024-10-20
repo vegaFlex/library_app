@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Library Management{% endblock %}</title>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+{#<header class="bg-blue-600 p-4">#}
+{#    <nav class="container mx-auto">#}
+{#        <ul class="flex space-x-4">#}
+{#            <li><a href="{% url 'catalog:book_list' %}" class="text-white">Books</a></li>#}
+{#            <li><a href="{% url 'admin:index' %}" class="text-white">Admin</a></li>#}
+{#        </ul>#}
+{#    </nav>#}
+<header class="bg-lightblue-200 p-4">
+    <nav class="container mx-auto">
+        <ul class="flex space-x-4">
+            <li>
+                <a href="{% url 'catalog:book_list' %}"
+                   class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Books
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'admin:index' %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Admin
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="mt-4">
+        {#        <form action="{% url 'catalog:search_books' %}" method="get" class="flex justify-center">#}
+        {#            <input type="text" name="q" placeholder="Search for books..."#}
+        {#                   class="p-2 w-1/2 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"/>#}
+        {#            <button type="submit"#}
+        {#                    class="bg-white text-blue-600 font-semibold p-2 rounded-r-lg border border-gray-300 hover:bg-blue-600 hover:text-white">#}
+        {#                Search#}
+        {#            </button>#}
+        {#        </form>#}
+    </div>
+</header>
+<main class="container mx-auto mt-8">
+    {% block content %}{% endblock %}
+</main>
+<footer class="bg-gray-800 p-4 mt-8 text-center text-white">
+    <p>Library Management &copy; 2024</p>
+</footer>
+</body>
+</html>

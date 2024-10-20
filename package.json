@@ -1,0 +1,21 @@
+{
+  "name": "librarymanager",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "build": "npx postcss static_src/css/input.css -o static/css/styles.css",
+    "watch": "npx postcss static_src/css/input.css -o static/css/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.3.14"
+  },
+  "devDependencies": {
+    "postcss-cli": "^11.0.0"
+  }
+}

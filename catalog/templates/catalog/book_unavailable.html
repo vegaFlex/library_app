@@ -1,0 +1,7 @@
+{% extends "catalog/base.html" %}
+
+{% block content %}
+    <h1>Book Unavailable</h1>
+    <p>The book "{{ book.title }}" is currently unavailable. Please try again later.</p>
+    <a href="{% url 'catalog:book_list' %}">Back to book list</a>
+{% endblock %}

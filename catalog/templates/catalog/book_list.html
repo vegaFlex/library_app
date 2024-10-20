@@ -1,0 +1,32 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}Books{% endblock %}
+
+{% block content %}
+    <form method="GET" action="{% url 'catalog:search_books' %}" class="mb-4">
+        <input type="text" name="q" placeholder="Search for a book..." class="px-4 py-2 border rounded w-full sm:w-1/2">
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded mt-2 sm:mt-0">Search</button>
+    </form>
+
+    <h1 class="text-2xl font-bold mb-4">Books Available</h1>
+    <ul class="space-y-4">
+        {% for book in books %}
+            <li class="bg-white p-4 shadow rounded">
+                <h2 class="text-xl font-semibold">{{ book.title }}</h2>
+                <p>Author: {{ book.author }}</p>
+                <p>Genre: {{ book.genre }}</p>
+                <p>Published: {{ book.publication_year }}</p>
+                <div class="mt-2 flex space-x-4">
+                    <a href="{% url 'catalog:book_detail' book.id %}"
+                       class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        View Details
+                    </a>
+                    <a href="{% url 'catalog:borrow_book' book.id %}"
+                       class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                        Borrow this book
+                    </a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

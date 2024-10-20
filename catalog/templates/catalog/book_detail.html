@@ -1,0 +1,15 @@
+{% extends 'catalog/base.html' %}
+
+{% block title %}{{ book.title }}{% endblock %}
+
+{% block content %}
+    <h1 class="text-2xl font-bold mb-4">{{ book.title }}</h1>
+    <p>Author: {{ book.author }}</p>
+    <p>Genre: {{ book.genre }}</p>
+    <p>Published: {{ book.publication_year }}</p>
+    <p>ISBN: {{ book.isbn }}</p>
+    <p>{{ book.summary }}</p>
+    <p>Available Copies: {{ book.available_copies }}</p>
+    <a href="#" class="mt-4 inline-block bg-blue-500 text-white py-2 px-4 rounded">Borrow this book</a>
+    <a href="{% url 'catalog:add_review' book.id %}" class="text-blue-500">Add a review</a>
+{% endblock %}
