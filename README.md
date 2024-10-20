@@ -22,10 +22,20 @@ Reviews and Ratings:
 Users can add reviews and ratings for books they have read.
 Admin Dashboard:
 
-An admin panel where admins can track stats like most borrowed books, active readers, etc.
+1:
+Create an admin panel where admins can track stats like most borrowed books, active readers, etc.
 Technology and Libraries
 Django as backend.
 Django REST Framework.
 PostgreSQL for database.
 Django Admin for management and testing.
 Bootstrap or TailwindCSS for styling the interface.
+
+2:
+Create a public web page using Django views, templates, and URLs. This will allow users to:
+
+View a list of books.
+See details about a book, including reviews.
+Request borrowing books.
+Create and manage their own profiles (registration and login).
+Add reviews and rate books.
